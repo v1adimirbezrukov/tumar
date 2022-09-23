@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Golos Text';
   src: url("../fonts/GolosText-Black.woff2") format("woff2"), url("../fonts/GolosText-Black.woff") format("woff");
@@ -3881,17 +3882,21 @@ ul {
   width: 100%;
   margin-bottom: 25px;
   height: 636px;
+  border: 2px solid #e4e4e4;
+  padding: 60px;
 }
 
 @media only screen and (max-width: 1300px) {
   .appart__right-image {
     height: 450px;
+    padding: 30px;
   }
 }
 
 @media only screen and (max-width: 991px) {
   .appart__right-image {
     height: 350px;
+    padding: 20px;
   }
 }
 
@@ -3899,6 +3904,7 @@ ul {
   .appart__right-image {
     height: 100%;
     width: 100%;
+    padding: 10px;
   }
 }
 
@@ -4783,4 +4789,77 @@ ul {
 
 .error__btn:hover {
   background: #9e6c4e;
+}
+
+.preloader {
+  /*фиксированное позиционирование*/
+  position: fixed;
+  /* координаты положения */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  /* фоновый цвет элемента */
+  background: #ffbe98;
+  /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-animation: preloader-rotate 2s infinite linear;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin: 0 auto 20px auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .preloader__item {
+    width: 250px;
+  }
+}
+
+.preloader__item img {
+  width: 100%;
+  height: 100%;
+}
+
+.preloader__line {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 991px) {
+  .preloader__line {
+    font-size: 24px;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
 }
