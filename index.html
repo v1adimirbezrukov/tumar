@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="preloader">
+      <div class="preloader__frame"></div>
       <div class="preloader__row">
         <div class="preloader__item"><img src="images/tumar.svg" alt="" /></div>
         <div class="preloader__line">TUMAR GOLD - СДЕЛАЙТЕ МЕЧТУ РЕАЛЬНОСТЬЮ</div>
@@ -26,7 +27,9 @@
             </a>
             <div class="header__item">
               <a href="tel:333" class="header__number desk"><img src="images/header-tel.svg" alt="" /> 333</a>
-              <a href="https://web.whatsapp.com/send?phone=77007333033" target="_blank" class="header__whatsapp desk"><img src="images/header-whatsapp.svg" alt="" />WhatsApp</a>
+              <a href="https://web.whatsapp.com/send?phone=77007333033" target="_blank" class="header__whatsapp desk"
+                ><img src="images/header-whatsapp.svg" alt="" />WhatsApp</a
+              >
               <a href="#modal" data-fancybox="" class="header__btn desk"
                 ><img src="images/header-call.svg" alt="" />Консультация</a
               >
@@ -55,7 +58,10 @@
             <div class="drop-menu__end">
               <div class="drop-menu__mobile">
                 <div class="drop-menu__btns">
-                  <a href="https://web.whatsapp.com/send?phone=77007333033" target="_blank" class="header__whatsapp mobile"
+                  <a
+                    href="https://web.whatsapp.com/send?phone=77007333033"
+                    target="_blank"
+                    class="header__whatsapp mobile"
                     ><img src="images/header-whatsapp.svg" alt="" />WhatsApp</a
                   >
                   <a href="#modal" data-fancybox="" class="header__btn mobile"
@@ -146,7 +152,7 @@
               <div class="showcase__blocks">
                 <div class="showcase__block">
                   <div class="showcase__block-head">Стоимость</div>
-                  <div class="showcase__block-text">от 340 000 ₸/м²</div>
+                  <div class="showcase__block-text">от 360 000 ₸/м²</div>
                 </div>
                 <div class="showcase__block">
                   <div class="showcase__block-head">Класс</div>
@@ -186,7 +192,7 @@
               </div>
               <div class="about__file element-animation">
                 <a href="buklet_compressed.pdf" download="buklet_compressed.pdf" class="about__download">
-                  <img src="buklet_compressed.pdf" alt="" />
+                  <img src="images/download.svg" alt="" />
                 </a>
                 <div class="about__file-block">
                   <a href="buklet_compressed.pdf" download="buklet_compressed.pdf" class="about__file-name">
@@ -242,7 +248,7 @@
               </div>
               <div class="icons__block">
                 <div class="icons__head">Стоимость</div>
-                <div class="icons__text">от 340 000 ₸/м²</div>
+                <div class="icons__text">от 360 000 ₸/м²</div>
               </div>
             </div>
             <div class="icons__item element-animation">
@@ -367,14 +373,14 @@
               <div class="tumar__title">Cтроим семейные ценности вместе</div>
               <div class="tumar__text">
                 <p>
-                  Мы ставим перед собой амбициозные цели, разрабатываем уникальные проекты, которые наполнятся уютом
-                  домашнего очага и станут украшением любимого города
-                </p>
-                <p>
                   Tumar Group - строительная компания, занимающаяся возведением и реализацией жилых комплексов в г.
                   Нур-Султан с 2004 года. Мы гордимся высоким качеством строительства, надежностью наших объектов и
                   профессионализмом нашего коллектива. В наших домах уже живут счастливые семьи, обретают первых друзей
                   маленькие дети и расцветает культура добрососедства.
+                </p>
+                <p>
+                  Мы ставим перед собой амбициозные цели, разрабатываем уникальные проекты, которые наполнятся уютом
+                  домашнего очага и станут украшением любимого города
                 </p>
               </div>
             </div>
@@ -408,11 +414,11 @@
           <div class="object__header">
             <div class="object__tabs">
               <div id="object-plan" class="object__tab object__tab-first active" data-tabs-type>Генплан</div>
-              <div class="object__tab" data-tabs-type>Показать на карте</div>
-              <div class="object__tab" data-tabs-type>Обзор 360°</div>
+              <div id="object-map" class="object__tab" data-tabs-type>Показать на карте</div>
+              <div id="object-360" class="object__tab" data-tabs-type>Обзор 360°</div>
             </div>
           </div>
-          <div class="object__content" data-tabs-typecontent>
+          <div id="object-content-first" class="object__content active">
             <div class="object__plan">
               <div class="object__plan-image">
                 <img src="images/terrotory.png" alt="" />
@@ -420,13 +426,13 @@
             </div>
           </div>
         </div>
-        <div class="object__content" style="display: none" data-tabs-typecontent>
+        <div id="object-content-second" class="object__content">
           <div id="map" class="map"></div>
         </div>
-        <div class="object__content" style="display: none" data-tabs-typecontent>
+        <div id="object-content-third" class="object__content">
           <iframe
             class="iframe-obzor"
-            src="https://nur-sultan3d.kz/3d/tumar/#pano546821/169.5/16.7/68.1"
+            src="https://nur-sultan3d.kz/3d/tumar/#pano546821/-16.0/16.7/65.0"
             width="100%"
             height="100%"
           >
@@ -568,7 +574,7 @@
               <div class="dvor__info">
                 Одним из важных вопросов при выборе места для жизни являются благоустройство двора и придомовой
                 территории. Новый формат жилья и дворовой площади, где Вы и Ваши дети будут с радостью проводить время,
-                не переживая за Вашу безопасность.
+                не переживая за собственную безопасность.
               </div>
             </div>
           </div>
@@ -757,123 +763,123 @@
                   <div class="appart__blocks">
                     <div class="appart__block active" data-info-current="1-2">
                       <div class="appart__block-image">
-                        <img src="images/appart-1-1.png" alt="" />
+                        <img src="images/appart-4-2.png" alt="" />
                       </div>
-                      <div class="appart__block-size">40.39 м²</div>
+                      <div class="appart__block-size">41.71 м²</div>
                     </div>
                     <div class="appart__block" data-info-current="1-2">
-                      <div class="appart__block-image">
-                        <img src="images/appart-1-2.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">40.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-2">
-                      <div class="appart__block-image">
-                        <img src="images/appart-1-3.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">40.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-2">
-                      <div class="appart__block-image">
-                        <img src="images/appart-1-4.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">40.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-2">
-                      <div class="appart__block-image">
-                        <img src="images/appart-1-5.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">40.39 м²</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="appart__content" data-tabs-plancontent>
-                  <div class="appart__blocks">
-                    <div class="appart__block active" data-info-current="1-2">
-                      <div class="appart__block-image">
-                        <img src="images/appart-2-1.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">40.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-3">
-                      <div class="appart__block-image">
-                        <img src="images/appart-2-2.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">42.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-3">
-                      <div class="appart__block-image">
-                        <img src="images/appart-2-3.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">42.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-3">
                       <div class="appart__block-image">
                         <img src="images/appart-2-4.png" alt="" />
                       </div>
-                      <div class="appart__block-size">42.39 м²</div>
+                      <div class="appart__block-size">45.55 м²</div>
                     </div>
-                    <div class="appart__block" data-info-current="1-3">
+                  </div>
+                </div>
+                <div class="appart__content" data-tabs-plancontent>
+                  <div class="appart__blocks">
+                    <div class="appart__block active" data-info-current="2-3">
                       <div class="appart__block-image">
                         <img src="images/appart-2-5.png" alt="" />
                       </div>
-                      <div class="appart__block-size">42.39 м²</div>
+                      <div class="appart__block-size">52.09 м²</div>
                     </div>
-                  </div>
-                </div>
-                <div class="appart__content" data-tabs-plancontent>
-                  <div class="appart__blocks">
-                    <div class="appart__block active" data-info-current="1-2">
-                      <div class="appart__block-image">
-                        <img src="images/appart-3-1.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">40.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-3">
+                    <div class="appart__block" data-info-current="2-3">
                       <div class="appart__block-image">
                         <img src="images/appart-3-2.png" alt="" />
                       </div>
-                      <div class="appart__block-size">42.39 м²</div>
+                      <div class="appart__block-size">51.15 м²</div>
                     </div>
-                    <div class="appart__block" data-info-current="1-3">
-                      <div class="appart__block-image">
-                        <img src="images/appart-3-3.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">42.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-3">
+                    <div class="appart__block" data-info-current="2-3">
                       <div class="appart__block-image">
                         <img src="images/appart-3-4.png" alt="" />
                       </div>
-                      <div class="appart__block-size">42.39 м²</div>
+                      <div class="appart__block-size">51.12 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-1-5.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">46.98 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-1-2.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">65.22 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-1-3.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">65.24 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-4-1.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">67.03 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-4-3.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">66.52 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-1-4.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">63.71 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-2-1.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">45.87 м²</div>
                     </div>
                   </div>
                 </div>
                 <div class="appart__content" data-tabs-plancontent>
                   <div class="appart__blocks">
-                    <div class="appart__block active" data-info-current="1-2">
+                    <div class="appart__block active" data-info-current="2-2">
                       <div class="appart__block-image">
-                        <img src="images/appart-4-1.png" alt="" />
+                        <img src="images/appart-1-1.png" alt="" />
                       </div>
-                      <div class="appart__block-size">40.39 м²</div>
+                      <div class="appart__block-size">80.63 м²</div>
                     </div>
-                    <div class="appart__block" data-info-current="1-3">
-                      <div class="appart__block-image">
-                        <img src="images/appart-4-2.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">42.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-3">
-                      <div class="appart__block-image">
-                        <img src="images/appart-4-3.png" alt="" />
-                      </div>
-                      <div class="appart__block-size">42.39 м²</div>
-                    </div>
-                    <div class="appart__block" data-info-current="1-3">
+                    <div class="appart__block" data-info-current="2-3">
                       <div class="appart__block-image">
                         <img src="images/appart-4-4.png" alt="" />
                       </div>
-                      <div class="appart__block-size">42.39 м²</div>
+                      <div class="appart__block-size">112.37 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-3-3.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">96.35 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-3-1.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">96.62 м²</div>
+                    </div>
+                    <div class="appart__block" data-info-current="2-3">
+                      <div class="appart__block-image">
+                        <img src="images/appart-2-3.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">75.59 м²</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="appart__content" data-tabs-plancontent>
+                  <div class="appart__blocks">
+                    <div class="appart__block active" data-info-current="3-4">
+                      <div class="appart__block-image">
+                        <img src="images/appart-2-2.png" alt="" />
+                      </div>
+                      <div class="appart__block-size">120.99 м²</div>
                     </div>
                   </div>
                 </div>
@@ -881,7 +887,7 @@
             </div>
             <div class="appart__right">
               <div class="appart__right-image">
-                <img src="images/appart-1-1.png" alt="" />
+                <img src="images/appart-4-2.png" alt="" />
               </div>
               <div class="appart__end">
                 <div class="appart__end-block">
@@ -950,7 +956,9 @@
                   </div>
                   <div class="contacts__block-item">
                     <div class="contacts__head">WhatsApp</div>
-                    <a href="https://web.whatsapp.com/send?phone=77007333033" target="_blank" class="contacts__text">+7 700 7 333 033 </a>
+                    <a href="https://web.whatsapp.com/send?phone=77007333033" target="_blank" class="contacts__text"
+                      >+7 700 7 333 033
+                    </a>
                   </div>
                 </div>
                 <div class="contacts__block">
@@ -1020,7 +1028,7 @@
           var myMap = new ymaps.Map(
             'map-atiray',
             {
-              center: [51.142, 71.46],
+              center: [51.099522124648104, 71.42923903935181],
               zoom: 16,
               controls: [],
             },
@@ -1070,7 +1078,7 @@
           iconImageOffset: [-32, -42],
         })
         talanCollection.add(
-          new ymaps.Placemark([51.142, 71.46], {
+          new ymaps.Placemark([51.099522124648104, 71.42923903935181], {
             hintContent: 'Офис продаж',
           })
         )
@@ -1078,203 +1086,206 @@
       }
     </script>
     <script>
-      window.onload = function () {
-        ymaps.ready(initDavinci)
-        function initDavinci() {
-          if (document.documentElement.clientWidth >= 600) {
-            var myMapDavinci = new ymaps.Map('map', {
-              center: [51.142, 71.46],
-              zoom: 15,
-              controls: [],
-            })
-            var zoomControl = new ymaps.control.ZoomControl({
-              options: {
-                position: {
-                  right: '14px',
-                  top: '215px',
-                },
-              },
-            })
-            myMapDavinci.controls.add(zoomControl)
-            myMapDavinci.behaviors.disable('scrollZoom')
-          }
-          if (document.documentElement.clientWidth < 600) {
-            var myMapDavinci = new ymaps.Map('map', {
-              center: [51.120646031485805, 71.48309367125145],
-              zoom: 14,
-              controls: [],
-            })
-            var zoomControl = new ymaps.control.ZoomControl({
-              options: {
-                position: {
-                  right: '14px',
-                  top: '25px',
-                },
-              },
-            })
-            myMapDavinci.controls.add(zoomControl)
-          }
-          tamerlanCollection = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba29cba7fd633b98c66255_map-zhk-pin%403x.png',
-            iconImageSize: [64, 64],
-            iconImageOffset: [-34, -54],
-          })
-          tamerlanCollection.add(
-            new ymaps.Placemark([51.143, 71.46], {
-              hintContent: 'ЖК Tumar Gold',
-            })
-          )
-          // МЕЧЕТЬ
-          mechetCollection = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
-          })
-          mechetCollection.add(
-            new ymaps.Placemark([51.141563, 71.464432], {
-              hintContent: 'ЦОН - государственное учреждение',
-            })
-          )
-          // ДРАМТЕАТР
-          maskCollection = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8fa7fd637c37c67f16_map-icon-theatre.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
-          })
 
-          // ШКОЛЫ
-          schoolCollection1 = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
+      ymaps.ready(initDavinci)
+      function initDavinci() {
+        if (document.documentElement.clientWidth >= 600) {
+          var myMapDavinci = new ymaps.Map('map', {
+            center: [51.142, 71.46],
+            zoom: 15,
+            controls: [],
           })
-          schoolCollection1.add(
-            new ymaps.Placemark([51.145366, 71.466366], {
-              hintContent: 'Школа-лицей №50',
-            })
-          )
-          schoolCollection2 = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
+          var zoomControl = new ymaps.control.ZoomControl({
+            options: {
+              position: {
+                right: '14px',
+                top: '215px',
+              },
+            },
           })
-          schoolCollection2.add(
-            new ymaps.Placemark([51.14024, 71.465767], {
-              hintContent: 'Astana Mall',
-            })
-          )
-          // ДЕТСАД
-          detsadCollection1 = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c903e8b09be10a8a87e_icon-map-kindergarten.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
-          })
-          detsadCollection1.add(
-            new ymaps.Placemark([51.143305, 71.46425], {
-              hintContent: 'Ясли-сад №8',
-            })
-          )
-          detsadCollection2 = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
-          })
-          detsadCollection2.add(
-            new ymaps.Placemark([51.137336, 71.463506], {
-              hintContent: 'Дворец школьников',
-            })
-          )
-          detsadCollection3 = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c903e8b09be10a8a87e_icon-map-kindergarten.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
-          })
-          detsadCollection3.add(
-            new ymaps.Placemark([51.141364, 71.46434], {
-              hintContent: 'Фитнес-центр Winox',
-            })
-          )
-          // ХОЛЛЫ
-          hallCollection = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c903e8b09be10a8a87e_icon-map-kindergarten.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
-          })
-          hallCollection.add(
-            new ymaps.Placemark([51.135869, 71.450181], {
-              hintContent: 'Триатлон парк',
-            })
-          )
-          // МУЗЕИ
-          museumCollection = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c903e8b09be10a8a87e_icon-map-kindergarten.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
-          })
-          museumCollection.add(
-            new ymaps.Placemark([51.147852, 71.462281], {
-              hintContent: 'Детский сад №21',
-            })
-          )
-          // ИНСТИТУТ
-          educationCollection = new ymaps.GeoObjectCollection(null, {
-            preset: 'islands#yellowIcon',
-            iconLayout: 'default#image',
-            iconImageHref:
-              'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -24],
-          })
-          educationCollection.add(
-            new ymaps.Placemark([51.149397, 71.466152], {
-              hintContent: 'Школа-гимназия №30',
-            })
-          )
-          myMapDavinci.geoObjects.add(tamerlanCollection)
-          myMapDavinci.geoObjects.add(mechetCollection)
-          myMapDavinci.geoObjects.add(maskCollection)
-          myMapDavinci.geoObjects.add(schoolCollection1)
-          myMapDavinci.geoObjects.add(schoolCollection2)
-          myMapDavinci.geoObjects.add(detsadCollection1)
-          myMapDavinci.geoObjects.add(detsadCollection2)
-          myMapDavinci.geoObjects.add(detsadCollection3)
-          myMapDavinci.geoObjects.add(hallCollection)
-          myMapDavinci.geoObjects.add(museumCollection)
-          myMapDavinci.geoObjects.add(educationCollection)
-          myMapDavinci.geoObjects.add(railwayCollection)
+          myMapDavinci.controls.add(zoomControl)
+          myMapDavinci.behaviors.disable('scrollZoom')
         }
+        if (document.documentElement.clientWidth < 600) {
+          var myMapDavinci = new ymaps.Map('map', {
+            center: [51.120646031485805, 71.48309367125145],
+            zoom: 14,
+            controls: [],
+          })
+          var zoomControl = new ymaps.control.ZoomControl({
+            options: {
+              position: {
+                right: '14px',
+                top: '25px',
+              },
+            },
+          })
+          myMapDavinci.controls.add(zoomControl)
+        }
+        tamerlanCollection = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref: '../images/map-icon.png',
+          iconImageSize: [64, 64],
+          iconImageOffset: [-34, -54],
+        })
+        tamerlanCollection.add(
+          new ymaps.Placemark([51.1441, 71.4586], {
+            hintContent: 'ЖК Tumar Gold',
+          })
+        )
+        // МЕЧЕТЬ
+        mechetCollection = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+        mechetCollection.add(
+          new ymaps.Placemark([51.141563, 71.464432], {
+            hintContent: 'ЦОН - государственное учреждение',
+          })
+        )
+        // ДРАМТЕАТР
+        maskCollection = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8fa7fd637c37c67f16_map-icon-theatre.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+
+        // ШКОЛЫ
+        schoolCollection1 = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+        schoolCollection1.add(
+          new ymaps.Placemark([51.145366, 71.466366], {
+            hintContent: 'Школа-лицей №50',
+          })
+        )
+        schoolCollection2 = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+        schoolCollection2.add(
+          new ymaps.Placemark([51.14024, 71.465767], {
+            hintContent: 'Astana Mall',
+          })
+        )
+        // ДЕТСАД
+        detsadCollection1 = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c903e8b09be10a8a87e_icon-map-kindergarten.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+        detsadCollection1.add(
+          new ymaps.Placemark([51.143305, 71.46425], {
+            hintContent: 'Ясли-сад №8',
+          })
+        )
+        detsadCollection2 = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+        detsadCollection2.add(
+          new ymaps.Placemark([51.137336, 71.463506], {
+            hintContent: 'Дворец школьников',
+          })
+        )
+        detsadCollection3 = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c903e8b09be10a8a87e_icon-map-kindergarten.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+        detsadCollection3.add(
+          new ymaps.Placemark([51.141364, 71.46434], {
+            hintContent: 'Фитнес-центр Winox',
+          })
+        )
+        // ХОЛЛЫ
+        hallCollection = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c903e8b09be10a8a87e_icon-map-kindergarten.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+        hallCollection.add(
+          new ymaps.Placemark([51.135869, 71.450181], {
+            hintContent: 'Триатлон парк',
+          })
+        )
+        // МУЗЕИ
+        museumCollection = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c903e8b09be10a8a87e_icon-map-kindergarten.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+        museumCollection.add(
+          new ymaps.Placemark([51.147852, 71.462281], {
+            hintContent: 'Детский сад №21',
+          })
+        )
+        // ИНСТИТУТ
+        educationCollection = new ymaps.GeoObjectCollection(null, {
+          preset: 'islands#yellowIcon',
+          iconLayout: 'default#image',
+          iconImageHref:
+            'https://uploads-ssl.webflow.com/62b6ca6a035c3f365d1ad2df/62ba2c8edc63faa01b498f18_icon-map-school.svg',
+          iconImageSize: [32, 32],
+          iconImageOffset: [-5, -24],
+        })
+        educationCollection.add(
+          new ymaps.Placemark([51.149397, 71.466152], {
+            hintContent: 'Школа-гимназия №30',
+          })
+        )
+        myMapDavinci.geoObjects.add(tamerlanCollection)
+        myMapDavinci.geoObjects.add(mechetCollection)
+        myMapDavinci.geoObjects.add(maskCollection)
+        myMapDavinci.geoObjects.add(schoolCollection1)
+        myMapDavinci.geoObjects.add(schoolCollection2)
+        myMapDavinci.geoObjects.add(detsadCollection1)
+        myMapDavinci.geoObjects.add(detsadCollection2)
+        myMapDavinci.geoObjects.add(detsadCollection3)
+        myMapDavinci.geoObjects.add(hallCollection)
+        myMapDavinci.geoObjects.add(museumCollection)
+        myMapDavinci.geoObjects.add(educationCollection)
       }
     </script>
+ <script>
+  (function(w,d,u){
+          var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+          var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+  })(window,document,'https://cdn-ru.bitrix24.ru/b20599308/crm/site_button/loader_1_c5ymnf.js');
+</script>
     <script>
       window.onload = function () {
         document.body.classList.add('loaded_hiding')

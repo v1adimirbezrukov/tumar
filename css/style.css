@@ -169,7 +169,8 @@ ul {
 .header {
   background: #ffffff;
   padding: 10px 0;
-  position: absolute;
+  position: fixed;
+  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.05);
   top: 0;
   z-index: 100;
   left: 0;
@@ -631,7 +632,7 @@ ul {
 
 .drop-menu {
   background: #fafafa;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -1603,6 +1604,7 @@ ul {
 
 .object {
   margin-bottom: 120px;
+  position: relative;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -2069,6 +2071,44 @@ ul {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.object__content {
+  opacity: 0;
+  z-index: -1;
+  height: 688px;
+  width: 100%;
+  position: absolute;
+}
+
+@media only screen and (max-width: 1300px) {
+  .object__content {
+    height: 550px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .object__content {
+    height: 420px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .object__content {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .object__content {
+    height: 280px;
+  }
+}
+
+.object__content.active {
+  opacity: 1;
+  z-index: 5;
+  position: relative;
 }
 
 .map {
@@ -4598,11 +4638,11 @@ ul {
   padding: 13px 15px;
   z-index: 85;
   position: fixed;
-  bottom: 90px;
+  bottom: 20px;
   width: 50px;
   height: 50px;
   min-width: 50px;
-  right: 20px;
+  right: 30px;
   background: #926246;
   transform: rotate(180deg);
   display: none;
@@ -4610,8 +4650,8 @@ ul {
 
 @media only screen and (max-width: 767px) {
   .top_button {
-    bottom: 40px;
-    right: 10px;
+    bottom: 20px;
+    right: 15px;
   }
 }
 
@@ -4820,7 +4860,34 @@ ul {
   align-items: center;
   justify-content: center;
   width: 300px;
+  opacity: 0;
   margin: 0 auto 20px auto;
+  -webkit-animation: show2 1s 1;
+  animation: show2 1s 1;
+  /* Указываем название анимации, её время и количество повторов*/
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  /* Чтобы элемент оставался в конечном состоянии анимации */
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes show2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -4837,7 +4904,34 @@ ul {
 .preloader__line {
   font-size: 32px;
   font-weight: 700;
+  opacity: 0;
   text-transform: uppercase;
+  -webkit-animation: show 1s 1;
+  animation: show 1s 1;
+  /* Указываем название анимации, её время и количество повторов*/
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  /* Чтобы элемент оставался в конечном состоянии анимации */
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -4862,4 +4956,78 @@ ul {
 
 .loaded .preloader {
   display: none;
+}
+
+.preloader__frame {
+  position: absolute;
+  width: 99%;
+  left: 0;
+  top: 0;
+  height: 98%;
+  margin: 10px;
+  display: flex;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, #ffffff 100%, #ffffff 100%), linear-gradient(to bottom, #ffffff 100%, #ffffff 100%), linear-gradient(to right, #ffffff 100%, #ffffff 100%), linear-gradient(to bottom, #ffffff 100%, #ffffff 100%);
+  background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  -webkit-animation: anim-preloader__frame 6s cubic-bezier(0.19, 1, 0.22, 1) 1;
+  animation: anim-preloader__frame 6s cubic-bezier(0.19, 1, 0.22, 1) 1;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+@media only screen and (max-width: 767px) {
+  .preloader__frame {
+    left: -2%;
+    width: 98%;
+    top: -1%;
+  }
+}
+
+@-webkit-keyframes anim-preloader__frame {
+  0% {
+    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+  }
+  25% {
+    background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
+  }
+  50% {
+    background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
+  }
+  75% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
+  }
+  100% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+  }
+}
+
+@keyframes anim-preloader__frame {
+  0% {
+    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+  }
+  25% {
+    background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
+  }
+  50% {
+    background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
+  }
+  75% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
+  }
+  100% {
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+  }
+}
+
+.b24-widget-button-wrapper.b24-widget-button-position-bottom-right.b24-widget-button-visible {
+  bottom: 100px;
+  right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .b24-widget-button-wrapper.b24-widget-button-position-bottom-right.b24-widget-button-visible {
+    right: 10px;
+    bottom: 90px;
+  }
 }

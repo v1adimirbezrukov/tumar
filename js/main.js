@@ -16,7 +16,16 @@ $(document).ready(function () {
     if (!$(this).hasClass('active')) {
       var index = $(this).index()
       $(this).addClass('active').siblings().removeClass('active')
-      $('[data-tabs-typecontent]').hide().eq(index).fadeIn()
+      $('.object__content').removeClass('active')
+      if ($('#object-plan').hasClass('active')) {
+        $('#object-content-first').addClass('active')
+      }
+      if ($('#object-map').hasClass('active')) {
+        $('#object-content-second').addClass('active')
+      }
+      if ($('#object-360').hasClass('active')) {
+        $('#object-content-third').addClass('active')
+      }
     }
     return false
   })
