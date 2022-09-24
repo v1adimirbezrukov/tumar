@@ -314,4 +314,9 @@ $(document).ready(function () {
   for (let elm of elements) {
     observer.observe(elm)
   }
+  
+
+  $(function() {
+    $('.lazy').Lazy();
+});
 })

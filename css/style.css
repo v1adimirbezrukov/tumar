@@ -637,7 +637,7 @@ ul {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 90;
+  z-index: 99999;
   transition: 500ms;
   top: -100vh;
 }
@@ -1386,11 +1386,11 @@ ul {
 }
 
 .icons__item:hover .icons__image img:first-child {
-  display: none;
+  display: none !important;
 }
 
 .icons__item:hover .icons__image img:last-child {
-  display: block;
+  display: block !important;
 }
 
 .icons__image {
@@ -4842,7 +4842,7 @@ ul {
   /* фоновый цвет элемента */
   background: #ffbe98;
   /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
-  z-index: 1001;
+  z-index: 999999;
 }
 
 .preloader__row {
