@@ -4238,7 +4238,7 @@ ul {
   right: 0;
   bottom: 0;
   /* фоновый цвет элемента */
-  background: #ffbe98;
+  background: rgba(0, 0, 0, 0.64);
   /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
   z-index: 999999;
 }
@@ -4256,12 +4256,16 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 97px;
   opacity: 0;
   margin: 0 auto 20px auto;
   animation: show2 1s 1; /* Указываем название анимации, её время и количество повторов*/
   animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
   animation-delay: 0.5s;
+
+  @media only screen and (max-width: 991px) {
+    width: 60px;
+  }
 
   @keyframes show2 {
     0% {
@@ -4272,9 +4276,6 @@ ul {
     }
   }
 
-  @media only screen and (max-width: 767px) {
-    width: 250px;
-  }
 
   img {
     width: 100%;
@@ -4283,13 +4284,14 @@ ul {
 }
 
 .preloader__line {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 50px;
+  font-weight: 600;
   opacity: 0;
+  color: #fff;
   text-transform: uppercase;
   animation: show 1s 1; /* Указываем название анимации, её время и количество повторов*/
   animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
-  animation-delay: 2s;
+  animation-delay: 1s;
 
   @keyframes show {
     0% {
@@ -4322,46 +4324,7 @@ ul {
   display: none;
 }
 
-.preloader__frame {
-  position: absolute;
-  width: 99%;
-  left: 0;
-  top: 0;
-  height: 98%;
-  margin: 10px;
-  display: flex;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(to right, #ffffff 100%, #ffffff 100%),
-    linear-gradient(to bottom, #ffffff 100%, #ffffff 100%), linear-gradient(to right, #ffffff 100%, #ffffff 100%),
-    linear-gradient(to bottom, #ffffff 100%, #ffffff 100%);
-  background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
-  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  animation: anim-preloader__frame 6s cubic-bezier(0.19, 1, 0.22, 1) 1;
-  animation-play-state: running;
 
-  @media only screen and (max-width: 767px) {
-    left: -2%;
-    width: 98%;
-    top: -1%;
-  }
-}
-@keyframes anim-preloader__frame {
-  0% {
-    background-size: 0 3px, 3px 0, 0 3px, 3px 0;
-  }
-  25% {
-    background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
-  }
-  50% {
-    background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
-  }
-  75% {
-    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
-  }
-  100% {
-    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
-  }
-}
 
 
 .b24-widget-button-wrapper.b24-widget-button-position-bottom-right.b24-widget-button-visible{
